@@ -1,7 +1,7 @@
 const NUM_LEDS = 60;
 var cpLinker;
 var num_keyColor = 0;
-var colorArray = new Array(60);
+var colorArray = new Array(NUM_LEDS);
 
 
 
@@ -76,13 +76,37 @@ function changeColor(){
                                 num_keyColor++;
                             }
                         }
-
-
-
                     }
                 }
             }
     }
+    if(colored){
+        console.log('Output to LEDS');
+        var formData = new FormData();
+        var i;
+        for(i==0;i<colorArray.length;i++){
+            formData.append(i,colorArray[i]);
+        }
+
+        var request = new XMLHttpRequest();
+        request.open("POST","http://192.168.0.100/leds.php");
+        request.send(formData);
+        console.log('LED Form submitted');
+    }
+}
+
+function colored(){
+    var i;
+    for(i = 0; i<colorArray.length;i++){
+        if(colorArray[i] === undefined){
+            return false;
+        }
+    }
+    return true;
+}
+
+function applyColors(){
+
 }
 
 
