@@ -83,11 +83,14 @@ function changeColor(){
 
     if(colored()){
         console.log('Output to LEDS');
-        var formData = new FormData();
+        var formData = colorArray;
         var i;
-        for(i==0;i<colorArray.length;i++){
-            formData.append('color',colorArray[i]);
+        var xml='<?xml version=1.0 encoding=UTF-8?>';
+        for(i=0;i<NUM_LEDS;i++){
+
         }
+
+
         console.log(formData);
 
         var request = new XMLHttpRequest();
