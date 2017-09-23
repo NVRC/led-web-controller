@@ -8,7 +8,7 @@
 
 
 
-    $command = escapeshellcmd('python led_output.py '.escapeshellarg($colorArray));
+    $command = escapeshellcmd('sudo python led_output.py '.escapeshellarg($colorArray));
     echo $command;
     $output = shell_exec($command);
     echo $output;
