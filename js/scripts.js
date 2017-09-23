@@ -89,7 +89,7 @@ function changeColor(){
         for(i=0;i<NUM_LEDS-1;i++){
             formData += "color="+colorArray[i]+"&";
         }
-        formData += "color="colorArray[NUM_LEDS-1];
+        formData += "color="+colorArray[NUM_LEDS-1];
 
 
         console.log(formData);
