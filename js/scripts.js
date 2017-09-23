@@ -87,18 +87,20 @@ function changeColor(){
         var i;
         var xml='<?xml version=1.0 encoding=UTF-8?>';
         for(i=0;i<NUM_LEDS-1;i++){
-            formData += "color="+colorArray[i]+"&";
+            formData += i+"="+colorArray[i]+"&";
         }
-        formData += "color="+colorArray[NUM_LEDS-1];
+        formData += NUM_LEDS-1+"="+colorArray[NUM_LEDS-1];
 
 
         console.log(formData);
 
         var request = new XMLHttpRequest();
-        request.open("POST","http://192.168.0.100/php/leds.php");
+        request.open("POST","http://192.168.0.100/php/leds.php",false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send(formData);
+
         console.log('LED Form submitted');
+        console.log(xml.responseText);
     }
 }
 
