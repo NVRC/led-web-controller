@@ -88,6 +88,7 @@ function changeColor(){
         for(i==0;i<colorArray.length;i++){
             formData.append(i,colorArray[i]);
         }
+        console.log(formData);
 
         var request = new XMLHttpRequest();
         request.open("POST","http://192.168.0.100/php/leds.php");
