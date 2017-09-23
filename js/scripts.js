@@ -80,7 +80,7 @@ function changeColor(){
                 }
             }
     }
-    if(colored){
+    if(colored == true){
         console.log('Output to LEDS');
         var formData = new FormData();
         var i;
@@ -89,7 +89,7 @@ function changeColor(){
         }
 
         var request = new XMLHttpRequest();
-        request.open("POST","http://192.168.0.100/leds.php");
+        request.open("POST","http://192.168.0.100/php/leds.php");
         request.send(formData);
         console.log('LED Form submitted');
     }
