@@ -2,8 +2,8 @@
 $colorArray = array();
 $NUM_LEDS = 60;
 
-for($i = 0; $i < NUM_LEDS; i++){
-    $colorArray[] = ($_POST[i]);
+for($i = 0; $i < $NUM_LEDS; $i++){
+    $colorArray[] = ($_POST[$i]);
 }
 
 
