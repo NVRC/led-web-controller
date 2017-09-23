@@ -8,9 +8,9 @@
     $colorArray = array();
     $NUM_LEDS = 60;
 
-    $command = escapeshellcmd('python /var/www/led-web-controller/python/led_output.py args');
+    $command = escapeshellcmd('python /var/www/led-web-controller/python/led_output.py '.$_POST);
     $output = shell_exec($command);
-    echo $_POST;
+    echo var_dump($_POST);
 
     /*
     for($i = 0; $i < $NUM_LEDS; $i++){
