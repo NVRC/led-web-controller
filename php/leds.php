@@ -8,7 +8,8 @@ for($i = 0; $i < $NUM_LEDS; $i++){
 
 
 
-$command = escapeshellcmd('/var/www/led-web-controller/python/ led_output.py '.escapeshellarg($colorArray));
+$command = escapeshellcmd('led_output.py '.escapeshellarg($colorArray));
+echo $command;
 $output = shell_exec($command);
 echo $output;
 
