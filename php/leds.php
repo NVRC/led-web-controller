@@ -10,7 +10,7 @@
 
     $command = escapeshellcmd('python /var/www/led-web-controller/python/led_output.py '.$_POST);
     $output = shell_exec($command);
-    echo var_dump($_POST);
+    echo var_dump($_POST['color'] + $_POST[0]);
 
     /*
     for($i = 0; $i < $NUM_LEDS; $i++){
