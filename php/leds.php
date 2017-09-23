@@ -1,4 +1,9 @@
 <?php
+
+    $command = escapeshellcmd('python led_output.py  123');
+    echo $command;
+
+
     $colorArray = array();
     $NUM_LEDS = 60;
 
@@ -8,8 +13,7 @@
 
 
 
-    $command = escapeshellcmd('python led_output.py  123');
-    echo $command;
+
     $output = shell_exec($command);
     echo $output;
 ?>
