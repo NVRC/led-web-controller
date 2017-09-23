@@ -1,6 +1,8 @@
 <?php
 
-    $command = escapeshellcmd('python /var/www/led-web-controller/python/led_output.py  123');
+    //Node.js would be a good alternative to this tedious php workflow
+
+    $command = escapeshellcmd('sudo python /var/www/led-web-controller/python/led_output.py  123');
     $output = shell_exec($command);
     echo $output;
 
