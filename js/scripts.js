@@ -83,12 +83,13 @@ function changeColor(){
 
     if(colored()){
         console.log('Output to LEDS');
-        var formData = colorArray;
+        var formData ;
         var i;
         var xml='<?xml version=1.0 encoding=UTF-8?>';
-        for(i=0;i<NUM_LEDS;i++){
-
+        for(i=0;i<NUM_LEDS-1;i++){
+            formData += "color="+colorArray[i]+"&";
         }
+        formData += "color="colorArray[NUM_LEDS-1];
 
 
         console.log(formData);
