@@ -91,6 +91,7 @@ function changeColor(){
         console.log(formData);
 
         var request = new XMLHttpRequest();
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.open("POST","http://192.168.0.100/php/leds.php");
         request.send(formData);
         console.log('LED Form submitted');
