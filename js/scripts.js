@@ -83,7 +83,7 @@ function changeColor(){
 
     if(colored()){
         console.log('Output to LEDS');
-        var formData ;
+        var formData = "";
         var i;
         var xml='<?xml version=1.0 encoding=UTF-8?>';
         for(i=0;i<NUM_LEDS-1;i++){
