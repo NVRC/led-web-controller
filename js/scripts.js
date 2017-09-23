@@ -86,7 +86,7 @@ function changeColor(){
         var formData = new FormData();
         var i;
         for(i==0;i<colorArray.length;i++){
-            formData.append(i,colorArray[i]);
+            formData.append('color',colorArray[i]);
         }
         console.log(formData);
 
