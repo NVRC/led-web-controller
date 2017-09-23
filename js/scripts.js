@@ -80,7 +80,8 @@ function changeColor(){
                 }
             }
     }
-    if(colored == true){
+
+    if(colored()){
         console.log('Output to LEDS');
         var formData = new FormData();
         var i;
