@@ -97,12 +97,9 @@ function changeColor(){
         var request = new XMLHttpRequest();
         request.open("POST","http://192.168.0.100/php/leds.php",true);
         request.setRequestHeader("Content-Type", "application/json");
-        request.setRequestHeader("Content-length", formData.length);
-        request.setRequestHeader("Connection", "close");
         request.send(formData);
 
         console.log('LED Form submitted');
-        console.log(xml.responseText);
     }
 }
 
