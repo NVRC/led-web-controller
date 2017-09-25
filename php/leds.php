@@ -8,9 +8,13 @@
     $colorArray = array();
     $NUM_LEDS = 60;
 
+
+
     //$command = escapeshellcmd('python /var/www/led-web-controller/python/led_output.py 123');
     //$output = shell_exec($command);
-    echo file_get_contents("php://input");
+    foreach($_GET as $key=>$value){
+        echo "$key = ".urldecode($value)."</br>\n";
+    }
 
     /*
     for($i = 0; $i < $NUM_LEDS; $i++){
