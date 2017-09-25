@@ -10,7 +10,7 @@
 
     //$command = escapeshellcmd('python /var/www/led-web-controller/python/led_output.py 123');
     //$output = shell_exec($command);
-    echo $_GET['1'];
+    echo file_get_contents("php://input");
 
     /*
     for($i = 0; $i < $NUM_LEDS; $i++){
