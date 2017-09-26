@@ -9,7 +9,7 @@
     $NUM_LEDS = 60;
 
 
-    error_log($_GET,0,);
+    error_log($_GET,0);
 
     //$command = escapeshellcmd('python /var/www/led-web-controller/python/led_output.py 123');
     //$output = shell_exec($command);
