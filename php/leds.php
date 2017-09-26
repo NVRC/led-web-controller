@@ -8,7 +8,7 @@
     $colorArray = array();
     $NUM_LEDS = 60;
 
-    //var_dump($_SERVER);
+    var_dump($_REQUEST);
     //error_log(implode("|",$_SERVER),0);
 
     //$command = escapeshellcmd('python /var/www/led-web-controller/python/led_output.py 123');
