@@ -91,13 +91,14 @@ function changeColor(){
         }
         formData += NUM_LEDS-1+"="+colorArray[NUM_LEDS-1];
 
+        var URI = '192.168.0.100/php/leds.php?'+formData;
 
         console.log(formData);
 
         var request = new XMLHttpRequest();
-        request.open("GET",'http://192.168.0.100/php/leds.php',true);
-        request.setRequestHeader("Content-Type", "application/json");
-        request.send(formData);
+        request.open("GET",URI,true);
+        //request.setRequestHeader("Content-Type", "application/json");
+        //request.send(formData);
 
         console.log('LED Form submitted');
     }
