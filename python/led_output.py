@@ -6,7 +6,7 @@ if __name__ == '__main__':
 
 
 
-sys.path.insert(0, '~/Adafruit_DotStar_Pi/')
+sys.path.insert(0, 'home/pi/Adafruit_DotStar_Pi/')
 import linearGradientWrapper
 
 lgw = linearGradientWrapper();
