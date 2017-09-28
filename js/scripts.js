@@ -97,8 +97,8 @@ function changeColor(){
 
         var request = new XMLHttpRequest();
         request.open("GET",URI,true);
-        //request.setRequestHeader("Content-Type", "application/json");
-        //request.send(formData);
+        request.setRequestHeader("Content-Type", "plain/text");
+        request.send(formData);
 
         console.log('LED Form submitted');
     }
