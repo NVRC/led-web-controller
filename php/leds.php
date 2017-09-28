@@ -14,7 +14,7 @@
         $colorString = implode("",$colors);
         $command = escapeshellcmd('python /var/www/led-web-controller/python/led_output.py '.$colorString);
         $output = shell_exec($command);
-        echo $output;
+        console.error("SUCCESS: ".$output);
     } else {
         echo "No array of colors sent!";
     }
