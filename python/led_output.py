@@ -1,16 +1,9 @@
 #!/usr/bin/env
-
-import sys
+import imp
 if __name__ == '__main__':
     colors = sys.argv[1:]
 
-
-
-sys.path.insert(0, 'home/pi/Adafruit_DotStar_Pi/')
-
-import imp
-
-src = imp.load_source('linearGradientWrapper.py', '/home/pi/Adafruit_DotStar_Pi/')
+src = imp.load_source('linearGradientWrapper', '/home/pi/Adafruit_DotStar_Pi/linearGradientWrapper.py')
 
 lgw = src.linearGradientWrapper();
 lgw.addArray(colors)
