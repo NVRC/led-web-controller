@@ -5,8 +5,9 @@
 
     header("Content-type: text/plain");
 
-    echo ":: data received via GET ::\n\n";
+
     if(isset($_GET)){
+        echo ":: data received via GET ::\n\n";
         foreach ($_GET as $key => $value)
             $colors[$key] = ltrim($value,'#');
 
