@@ -2,7 +2,7 @@
 
     //Node.js would be a good alternative to this tedious php workflow
     $colors = array();
-    $python = '/../python/';
+    $python = '../python/';
 
     $currDir = getcwd();
     error_log($currDir);
