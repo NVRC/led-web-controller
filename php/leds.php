@@ -2,7 +2,8 @@
 
     //Node.js would be a good alternative to this tedious php workflow
     $colors = array();
-    $python = '/var/www/led-web-controller/python/';
+    $python = '/../../../../var/www/led-web-controller/python/';
+    $currDir = getcwd();
 
     header("Content-type: text/plain");
 
