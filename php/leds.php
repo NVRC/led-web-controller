@@ -3,7 +3,9 @@
     //Node.js would be a good alternative to this tedious php workflow
     $colors = array();
     $python = '/../../../../var/www/led-web-controller/python/';
+
     $currDir = getcwd();
+    error_log($currDir);
 
     header("Content-type: text/plain");
 
@@ -17,6 +19,8 @@
         chdir($python);
         $command = escapeshellcmd('sudo python led_output.py '.$colorString);
         $output = shell_exec($command);
+
+        $chdir($currDir);
         error_log("SUCCESS: ".$output);
     } else {
         echo "No array of colors sent!";
