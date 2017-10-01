@@ -1,7 +1,7 @@
 <?php
 
     if(ini_get('safe_mode')){
-        echo "Safe mode is on \n Current user: ".get_current_user();
+        echo "Safe mode is on \n Current user: ".get_current_user()."\n Current user: ".`whoami`;
     } else {
         echo "Current user:  ".get_current_user();
         $colors = array();
