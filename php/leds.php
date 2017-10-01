@@ -17,7 +17,7 @@
 
         $colorString = implode("",$colors);
         chdir($python);
-        $command = escapeshellcmd('sudo python led_output.py '.$colorString);
+        $command = escapeshellcmd('sudo python led_output.py {$colorString}');
         $output = shell_exec($command);
 
         chdir($currDir);
