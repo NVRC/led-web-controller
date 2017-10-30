@@ -19,11 +19,12 @@
                 $colors[$key] = ltrim($value,'#');
 
             $colorString = implode("",$colors);
-            chdir($python);
-            $command = escapeshellcmd('sudo python led_output.py '.$colorString);
-            $output = shell_exec($command);
+            //chdir($python);
+            //$command = escapeshellcmd('sudo python led_output.py '.$colorString);
+            //$output = shell_exec($command);
+            exec("sudo /usr/bin/python /var/www/open.py ".$colorString);
 
-            chdir($currDir);
+            //chdir($currDir);
             error_log("SUCCESS: ".$output);
         } else {
             echo "No array of colors sent!";
