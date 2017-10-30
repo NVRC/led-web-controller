@@ -25,7 +25,7 @@
             exec("sudo /usr/bin/python /var/www/open.py ".$colorString);
 
             //chdir($currDir);
-            error_log("SUCCESS: ".$output);
+            error_log("colorString: ".$colorString);
         } else {
             echo "No array of colors sent!";
         }
