@@ -2,9 +2,9 @@
 
 
         if(isset($_GET)){
-            echo ":: data received via GET ::\n\n";
             foreach ($_GET as $key => $value)
                 $colors[$key] = ltrim($value,'#');
+                error_log('Color: '.$colors[$key]);
 
             $colorString = implode("",$colors);
             //chdir($python);
