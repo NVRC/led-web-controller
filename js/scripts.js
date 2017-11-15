@@ -89,8 +89,8 @@ function changeColor(){
         for(i=0;i<NUM_LEDS-1;i++){
             formData += i+"="+colorArray[i]+"&";
         }
-
-        formData = formData.replace('#','');
+        formData += NUM_LEDS-1+"="+colorArray[NUM_LEDS-1];
+        formData = formData.replace(/#/g,'');
         var URI = 'http://192.168.0.100/php/leds.php?'+formData;
 
         console.log(formData);
