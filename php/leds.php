@@ -1,11 +1,11 @@
 <?php
-
+    $NUM_LEDS = 60;
 
         if(isset($_GET)){
             error_log('$_GET: '.var_dump($_GET));
-            foreach ($_GET as $key => $value)
-                $colors[$key] = ltrim($_GET[$key],'#');
-                error_log('Color: '.$colors[$key]);
+            for($i=0; $i<=$NUM_LEDS;i++)
+                $colors[$i] = $_GET[$i];
+                error_log('Color: '.$colors[$i]);
 
             $colorString = implode("",$colors);
             //chdir($python);
