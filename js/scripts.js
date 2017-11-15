@@ -89,7 +89,7 @@ function changeColor(){
         for(i=0;i<NUM_LEDS-1;i++){
             formData += i+"="+colorArray[i]+"&";
         }
-        formData += NUM_LEDS-1+"="+colorArray[NUM_LEDS-1];
+        
 
         var URI = 'http://192.168.0.100/php/leds.php?'+formData;
 
