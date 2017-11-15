@@ -7,14 +7,15 @@
                 $colors[$i] = $_GET[$i];
                 error_log('Color: '.$colors[$i]);
             }
-            $colorString = implode("",$colors);
+            $colorString = implode('',$colors);
+            error_log("colorString: ".var_dump($colorString));
             //chdir($python);
             //$command = escapeshellcmd('sudo python led_output.py '.$colorString);
             //$output = shell_exec($command);
             exec("sudo python2 /var/www/led-web-controller/python/led_output.py ".$colorString);
 
             //chdir($currDir);
-            error_log("colorString: ".var_dump($colorString));
+
         } else {
             echo "No array of colors sent!";
         }
