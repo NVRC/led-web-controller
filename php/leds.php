@@ -10,7 +10,7 @@
             //chdir($python);
             //$command = escapeshellcmd('sudo python led_output.py '.$colorString);
             //$output = shell_exec($command);
-            exec("sudo /var/www/led-web-controller/python/led_output ".$colorString);
+            exec("sudo python2 /var/www/led-web-controller/python/led_output.py ".$colorString);
 
             //chdir($currDir);
             error_log("colorString: ".$colorString);
