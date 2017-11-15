@@ -2,6 +2,7 @@
 
 
         if(isset($_GET)){
+            error_log('$_GET: '.var_dump($_GET));
             foreach ($_GET as $key => $value)
                 $colors[$key] = ltrim($_GET[$key],'#');
                 error_log('Color: '.$colors[$key]);
