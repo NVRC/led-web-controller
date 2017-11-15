@@ -1,17 +1,5 @@
 <?php
 
-    if(ini_get('safe_mode')){
-        echo "Safe mode is on \n Current user: ".get_current_user()."\n Current user: ".`whoami`;
-    } else {
-        echo "Current user:  ".get_current_user()."\n Current user: ".`whoami`;
-        $colors = array();
-        $python = '../python/';
-
-        $currDir = getcwd();
-        error_log($currDir);
-
-        header("Content-type: text/plain");
-
 
         if(isset($_GET)){
             echo ":: data received via GET ::\n\n";
@@ -22,14 +10,14 @@
             //chdir($python);
             //$command = escapeshellcmd('sudo python led_output.py '.$colorString);
             //$output = shell_exec($command);
-            exec("sudo /usr/bin/python /var/www/open.py ".$colorString);
+            exec("sudo /var/www/led-web-controller/python/led_output ".$colorString);
 
             //chdir($currDir);
             error_log("colorString: ".$colorString);
         } else {
             echo "No array of colors sent!";
         }
-    }
+
 
     //Node.js would be a good alternative to this tedious php workflow
 

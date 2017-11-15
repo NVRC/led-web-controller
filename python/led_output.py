@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/python
 from support import linearGradientWrapper
 import sys
 
