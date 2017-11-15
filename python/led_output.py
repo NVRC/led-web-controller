@@ -13,6 +13,6 @@ if __name__ == '__main__':
     print(color_seg)
 
 
-    lgw = linearGradientWrapper()
+    lgw = linearGradientWrapper.linearGradientWrapper()
     lgw.addArray(colors)
     lgw.display()
