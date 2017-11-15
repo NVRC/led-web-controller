@@ -13,7 +13,7 @@
             exec("sudo python2 /var/www/led-web-controller/python/led_output.py ".$colorString);
 
             //chdir($currDir);
-            error_log("colorString: ".$colorString);
+            error_log("colorString: ".var_dump($colorString));
         } else {
             echo "No array of colors sent!";
         }
