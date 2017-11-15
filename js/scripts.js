@@ -89,10 +89,10 @@ function changeColor(){
         for(i=0;i<NUM_LEDS-1;i++){
             formData += i+"="+colorArray[i]+"&";
         }
-        
+
 
         var URI = 'http://192.168.0.100/php/leds.php?'+formData;
-
+        formData = formData.replace('#','');
         console.log(formData);
 
         var request = new XMLHttpRequest();
