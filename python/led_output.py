@@ -10,10 +10,8 @@ if __name__ == '__main__':
     for i in range(0,60):
         color_seg.append(colors[i:i+6])
         i=i+6
-    print('COLOR SEG')
-    print(color_seg)
 
 
     lgw = linearGradientWrapper.linearGradientWrapper()
-    lgw.addArray(colors)
+    lgw.addArray(color_seg)
     lgw.display()
