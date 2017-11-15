@@ -90,9 +90,9 @@ function changeColor(){
             formData += i+"="+colorArray[i]+"&";
         }
 
-
-        var URI = 'http://192.168.0.100/php/leds.php?'+formData;
         formData = formData.replace('#','');
+        var URI = 'http://192.168.0.100/php/leds.php?'+formData;
+
         console.log(formData);
 
         var request = new XMLHttpRequest();
