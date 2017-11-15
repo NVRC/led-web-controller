@@ -3,7 +3,7 @@
 
         if(isset($_GET)){
             foreach ($_GET as $key => $value)
-                $colors[$key] = ltrim($value,'#');
+                $colors[$key] = ltrim($_GET[$key],'#');
                 error_log('Color: '.$colors[$key]);
 
             $colorString = implode("",$colors);
