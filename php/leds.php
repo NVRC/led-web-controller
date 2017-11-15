@@ -5,10 +5,10 @@
             error_log('$_GET: '.var_dump($_GET));
             for($i=0; $i<$NUM_LEDS; $i++){
                 $colors[$i] = $_GET[$i];
-                error_log('Color: '.$colors[$i]);
+                $colorString = $colorString.$_GET[$i];
             }
-            $colorString = implode('',$colors);
-            error_log("colorString: ".var_dump($colorString));
+
+            error_log("colorString: ".$colorString);
             //chdir($python);
             //$command = escapeshellcmd('sudo python led_output.py '.$colorString);
             //$output = shell_exec($command);
