@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from support import linearGradientWrapper as lgw
+from support import .support.linearGradientWrapper
 import sys
 
 
