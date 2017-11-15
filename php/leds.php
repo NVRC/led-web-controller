@@ -10,10 +10,10 @@
             //chdir($python);
             //$command = escapeshellcmd('sudo python led_output.py '.$colorString);
             //$output = shell_exec($command);
-            exec("sudo python2 /var/www/led-web-controller/python/led_output.py ".$colorString);
+            exec("python2 /var/www/led-web-controller/python/led_output.py ".$colorString);
 
             //chdir($currDir);
-            error_log("colorString: ".$colorString);
+            error_log("colorString: ".dump($colorString));
         } else {
             echo "No array of colors sent!";
         }
