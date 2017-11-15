@@ -3,7 +3,7 @@
 
         if(isset($_GET)){
             error_log('$_GET: '.var_dump($_GET));
-            for($i=0; $i<=$NUM_LEDS; $i++){
+            for($i=0; $i<$NUM_LEDS; $i++){
                 $colors[$i] = $_GET[$i];
                 error_log('Color: '.$colors[$i]);
             }
