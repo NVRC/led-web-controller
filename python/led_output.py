@@ -2,18 +2,14 @@
 from support import linearGradientWrapper
 import sys
 
-
+lgw = linearGradientWrapper.linearGradientWrapper()
 
 if __name__ == '__main__':
     colors = sys.argv[1:]
     color_seg = []
-    k=0
+
     for i in range(0,60):
-        color_seg.append(colors[i:i+6])
+        lgw.addHEX(colors[i:i+6])
         i=i+6
-        k+=1
 
-
-    lgw = linearGradientWrapper.linearGradientWrapper()
-    lgw.addArray(color_seg)
     lgw.display()
