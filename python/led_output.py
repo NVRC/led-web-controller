@@ -6,11 +6,8 @@ lgw = linearGradientWrapper.linearGradientWrapper()
 
 if __name__ == '__main__':
     colors = sys.argv[1:]
-    color_seg = []
+    lgw.addHEX(colors[0:7])
+    lgw.addHEX(colors[52:59])
 
-    for i in range(0,60):
-        lgw.addHEX(colors[i:i+6])
-        color_seg.append(colors[i:i+6])
-        i=i+6
 
-    lgw.led_output(color_seg)
+    lgw.display()
