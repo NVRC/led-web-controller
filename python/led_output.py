@@ -9,8 +9,8 @@ if __name__ == '__main__':
     color_seg = []
 
     for i in range(0,60):
-        lgw.addHEX(colors[i:i+7])
-        color_seg.append(colors[i:i+7])
-        i=i+7
+        lgw.addHEX(colors[i:i+6])
+        color_seg.append(colors[i:i+6])
+        i=i+6
 
     lgw.led_output(color_seg)

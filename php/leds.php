@@ -5,7 +5,7 @@
             error_log('$_GET: '.var_dump($_GET));
             for($i=0; $i<$NUM_LEDS; $i++){
                 $colors[$i] = $_GET[$i];
-                $colorString = '#'.$colorString.$_GET[$i];
+                $colorString = $colorString.$_GET[$i];
             }
 
             error_log("colorString: ".$colorString);
